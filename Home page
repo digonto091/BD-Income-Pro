@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("BD Earning Pro 👑"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              // Profile action
+            },
+            icon: Icon(Icons.account_circle),
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.grey[300],
+            width: double.infinity,
+            height: 150,
+            child: Center(
+              child: Text(
+                "Ad Banner Here",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
+          ListTile(
+            leading: Icon(Icons.account_balance_wallet),
+            title: Text("Balance: ৳500"),
+            trailing: TextButton(
+              onPressed: () {
+                // Task button action
+              },
+              child: Text("Do Task"),
+            ),
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.star),
+            title: Text("VIP Membership"),
+            trailing: Icon(Icons.chevron_right),
+            onTap: () {
+              // Navigate to VIP Page
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
